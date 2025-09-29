@@ -6,6 +6,9 @@ import { db } from './database/client';
 
 export const auth = betterAuth({
   basePath: '/auth',
+  trustedOrigins: [
+    'http://localhost:5173'
+  ],
   plugins: [
     openAPI()
   ],
